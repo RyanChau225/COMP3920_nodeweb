@@ -125,9 +125,11 @@ app.get('/members', (req,res) => {
         return
     }
     var name = req.session.name;
+    var pics = ["fluffy.gif", "socks.gif", "download.png"]
+    var selectpic = pics[Math.floor(Math.random()*3)]
     var html = `
     Hello, ` + name + `
-    <img src='/public/fluffy.gif' style='width:250px;'
+    <img src='/public/${selectpic}' style='width:250px;'
     <form action= '/logout' method='post'>
     <button>Signout</button>
     </form>
