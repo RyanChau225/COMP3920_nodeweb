@@ -45,10 +45,10 @@ app.use(session({
 app.get('/', (req,res) => {
         var signup = `
     <form action='/signup' method='get'>
-    <button>signup</button>
+    <button>Sign up</button>
     </form>
     <form action='/login' method='get'>
-    <button>login</button>
+    <button>Login</button>
     </form>
     `;
     res.send(signup);
